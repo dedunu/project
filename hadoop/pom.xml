@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>hadoop-maven</module>
+        <module>hadoop-mapper-only</module>
     </modules>
 
 
