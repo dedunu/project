@@ -14,6 +14,7 @@
         <module>spring</module>
         <module>maven</module>
         <module>java-ee</module>
+        <module>hibernate</module>
     </modules>
 
 
