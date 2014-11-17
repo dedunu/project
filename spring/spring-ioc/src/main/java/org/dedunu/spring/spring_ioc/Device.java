@@ -5,7 +5,17 @@ package org.dedunu.spring.spring_ioc;
  */
 public class Device {
 
+    private String deviceType;
+
+    public String getDeviceType() {
+        return deviceType;
+    }
+
+    public void setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
+    }
+
     public void turnOn() {
-        System.out.println("Device turned on.");
+        System.out.println(getDeviceType() + " is turned on.");
     }
 }
