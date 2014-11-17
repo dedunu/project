@@ -5,31 +5,25 @@ package org.dedunu.spring.spring_ioc;
  */
 public class Device {
 
-    private String deviceType;
-    private int buttonCount;
+    private Button powerButton;
+    private Button silentButton;
+    private Button lockButton;
 
-    public Device(String deviceType) {
-        this.deviceType = deviceType;
+    public void setPowerButton(Button powerButton) {
+        this.powerButton = powerButton;
     }
 
-    public Device(int buttonCount) {
-        this.buttonCount = buttonCount;
+    public void setSilentButton(Button silentButton) {
+        this.silentButton = silentButton;
     }
 
-    public Device(String deviceType, int buttonCount) {
-        this.deviceType = deviceType;
-        this.buttonCount = buttonCount;
-    }
-
-    public int getButtonCount() {
-        return buttonCount;
-    }
-
-    public String getDeviceType() {
-        return deviceType;
+    public void setLockButton(Button lockButton) {
+        this.lockButton = lockButton;
     }
 
     public void turnOn() {
-        System.out.println(getDeviceType() + " is turned on. And it has " + getButtonCount() + "(s).");
+        powerButton.printButton();
+        silentButton.printButton();
+        lockButton.printButton();
     }
 }
