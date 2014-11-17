@@ -12,6 +12,10 @@ public class Device {
         this.deviceType = deviceType;
     }
 
+    public Device(int buttonCount) {
+        this.buttonCount = buttonCount;
+    }
+
     public Device(String deviceType, int buttonCount) {
         this.deviceType = deviceType;
         this.buttonCount = buttonCount;
