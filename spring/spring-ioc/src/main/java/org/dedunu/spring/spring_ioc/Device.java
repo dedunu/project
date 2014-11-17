@@ -7,12 +7,12 @@ public class Device {
 
     private String deviceType;
 
-    public String getDeviceType() {
-        return deviceType;
+    public Device(String deviceType) {
+        this.deviceType = deviceType;
     }
 
-    public void setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
+    public String getDeviceType() {
+        return deviceType;
     }
 
     public void turnOn() {
