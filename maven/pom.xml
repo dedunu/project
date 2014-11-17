@@ -14,6 +14,7 @@
     <modules>
         <module>jar-module</module>
         <module>war-module</module>
+        <module>ejb-module</module>
     </modules>
 
 
