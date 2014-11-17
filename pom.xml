@@ -13,6 +13,7 @@
         <module>java-se</module>
         <module>spring</module>
         <module>maven</module>
+        <module>java-ee</module>
     </modules>
 
 
