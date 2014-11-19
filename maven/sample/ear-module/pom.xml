@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.dedunu.maven</groupId>
+		<artifactId>sample</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ear-module</artifactId>
+	<packaging>ear</packaging>
+
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.dedunu.maven</groupId>
+			<artifactId>jar-module</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+		</dependency>
+	<dependency>
+			<groupId>org.dedunu.maven</groupId>
+			<artifactId>ejb-module</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>org.dedunu.maven</groupId>
+			<artifactId>war-module</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<modules>
+						<jarModule>
+							<groupId>org.dedunu.maven</groupId>
+							<artifactId>jar-module</artifactId>
+							<bundleFileName>jar-module.jar</bundleFileName>
+						</jarModule>
+						<ejbModule>
+							<groupId>org.dedunu.maven</groupId>
+							<artifactId>ejb-module</artifactId>
+							<bundleFileName>ejb-module.jar</bundleFileName>
+						</ejbModule>
+						<webModule>
+							<groupId>org.dedunu.maven</groupId>
+							<artifactId>war-module</artifactId>
+							<bundleFileName>war-module.war</bundleFileName>
+							<contextRoot>/war</contextRoot>
+						</webModule>
+					</modules>
+					<displayName>ear-module</displayName>
+					<generateApplicationXml>true</generateApplicationXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>ear-module</finalName>
+	</build>
+
+</project>
