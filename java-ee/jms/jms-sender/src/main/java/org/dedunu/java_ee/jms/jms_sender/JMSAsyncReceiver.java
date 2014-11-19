@@ -27,6 +27,7 @@ public class JMSAsyncReceiver implements MessageListener {
     public void onMessage(Message message) {
         try {
             TextMessage textMessage = (TextMessage) message;
+            System.out.println("Trader Name : " + textMessage.getStringProperty("TradeName"));
             System.out.println(textMessage.getText());
         } catch (Exception up) {
             up.printStackTrace();
