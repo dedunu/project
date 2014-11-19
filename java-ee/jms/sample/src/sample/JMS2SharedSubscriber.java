@@ -15,6 +15,13 @@ public class JMS2SharedSubscriber implements MessageListener{
 			ConnectionFactory connectionFactory = new com.sun.messaging.ConnectionFactory();
 			JMSContext jmsContext = connectionFactory.createContext();
 			Topic topic = jmsContext.createTopic("TRADET");
+			/*
+			 * If you use createConsumer it will not share the load between 
+			 * subscribers.
+			 * JMSConsumer jmsConsumer = jmsContext.createSharedConsumer();
+			 * JMSConsumer jmsConsumer = jmsContext.createConsumer();  
+			 */
+			
 			JMSConsumer jmsConsumer = jmsContext.createSharedConsumer(topic,"sub:3e");
 			
 			jmsConsumer.setMessageListener(this);
