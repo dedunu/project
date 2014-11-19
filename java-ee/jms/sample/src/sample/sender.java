@@ -12,6 +12,7 @@ public class sender {
 			Queue queue = jmsContext.createQueue("TRADE");
 			jmsContext
 			.createProducer()
+			.setDeliveryDelay(5000)
 			.setProperty("TradeName","Dedunu")
 			.setDeliveryMode(DeliveryMode.NON_PERSISTENT)
 			.send(queue, "SELL AAPL 1500 SHARES");
