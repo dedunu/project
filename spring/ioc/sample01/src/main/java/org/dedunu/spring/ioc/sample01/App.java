@@ -1,4 +1,4 @@
-package org.dedunu.spring.ioc;
+package org.dedunu.spring.ioc.sample01;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

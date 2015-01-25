@@ -1,4 +1,4 @@
-package org.dedunu.spring.ioc;
+package org.dedunu.spring.ioc.sample01;
 
 public class Button {
     private String buttonText;
